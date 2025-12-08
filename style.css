@@ -1,410 +1,349 @@
-/* Text font */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700|Roboto+Mono:400,600|Roboto+Slab:400,600&subset=cyrillic,latin);
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Документ
+   ========================================================================== */
+
+/**
+ * 1. Исправьте высоту строки во всех браузерах.
+ * 2. Запретить изменение размера шрифта после изменения ориентации в iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Разделы
+   ========================================================================== */
+
+/**
+ * Уберите поля во всех браузерах.
+ */
 
 body {
-	font-family: 'Roboto', Arial, sans-serif; /* Text font */
-	font-size: 140%; /* Font size */ /* Text */
-	background: rgb(255, 255, 255) repeat center center fixed; /* Background */
-	background-size: cover;
-	padding: 0; 
-	margin: 0;
+  margin: 0;
 }
 
-body:not(.classic) .vcard > .grid-x {
-	display: block;
-	padding: 0;
-}
+/**
+ * Последовательно визуализируйте `основной` элемент в IE.
+ */
 
-body:not(.classic) .vcard > .grid-x > .cell {
-	display: block;
-	padding: 0;
+main {
+  display: block;
 }
 
-body.classic {
-	font-size: 100%; /* Classic theme font size */ /* Text */
-}
+/**
+ * Исправьте размер шрифта и поля для элементов `h1` в контекстах `section` и
+ * `article` в Chrome, Firefox, and Safari.
+ */
 
-body.dark {
-	background-color: rgb(15, 15, 15); /* Background */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
-body.dark.background {
-	background: url(background.jpg) repeat center center fixed; /* Background */
-	background-size: cover;
-	background-color: rgb(15, 15, 15);
-}
+/* Группировка содержимого
+   ========================================================================== */
 
-body.condensed {
-	font-family: 'Roboto Condensed', Arial, sans-serif; /* Text font */
-}
+/**
+ * 1. Добавьте правильный 'box sizing' в Firefox.
+ * 2. Покажите переполнение в Edge и IE.
+ */
 
-body.mono {
-	font-family: 'Roboto Mono', Arial, sans-serif; /* Text font */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
-body.slab {
-	font-family: 'Roboto Slab', Arial, sans-serif; /* Text font */
-}
+/**
+ * 1. Исправьте наследование и масштабирование размера шрифта во всех браузерах.
+ * 2. Исправьте нечетный размер шрифта "em" во всех браузерах.
+ */
 
-.main {
-	max-width: 390px; /* Card width = width + 60px (padding left and right). Change with the `.head .round {max-height: 330px;}` */
-	color: black; /* Font color */ /* Text */
-	background-color: rgba(255, 255, 255, 0.5);
-	
-	width: 100%;
-	margin: auto;
-	text-align: center;
-	height: calc(100vh);
-	display: table;
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
-.classic .main, body.classic.dark .main {
-	max-width: 590px; /* Classic theme card width = width + 60px (padding left and right). Change with the `.classic .head {max-width: 230px;}` */
-	background-color: transparent;
-}
+/* Семантика на уровне текста
+   ========================================================================== */
 
-body.dark .main {
-	color: white; /* Dark theme font color */ /* Text */
-	background-color: rgba(15, 15, 15, 0.5);
-}
+/**
+ * Удалите серый фон для активных ссылок в IE 10.
+ */
 
-.vcard {
-	max-width: inherit;
-	padding: 30px;
-	display: table-cell;
-	vertical-align: middle;
+a {
+  background-color: transparent;
 }
 
-.vcard a, 
-.vcard a:link, 
-.vcard a:visited, 
-.vcard a:hover, 
-.vcard a:active {
-	color: black; /* Font color */ /* Links */
-	text-decoration: none;
-}
+/**
+ * 1. Удалите нижнюю границу в Chrome 57-
+ * 2. Добавьте правильное оформление текста в Chrome, Edge, IE, Opera и Safari.
+ */
 
-body.dark .vcard a,
-body.dark .vcard a:link, 
-body.dark .vcard a:visited, 
-body.dark .vcard a:hover, 
-body.dark .vcard a:active {
-	color: white; /* Dark theme font color */ /* Links */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
-.classic .vcard > .grid-x {
-	background-color: rgba(255, 255, 255, 0.5);
-	border: 1px solid #cacaca;
-	
-	margin-left: -30px;
-	margin-right: -30px;
-	padding: 30px;
-}
+/**
+ * Добавьте правильный 'font weight' в Chrome, Edge и Safari.
+ */
 
-body.dark.classic .vcard > .grid-x {
-	background-color: rgba(15, 15, 15, 0.5);
-	border: 1px solid #8a8a8a;
+b,
+strong {
+  font-weight: bolder;
 }
 
-body.dark.background .vcard > .grid-x {
-	border: 0;
-}
+/**
+ * 1. Исправьте наследование и масштабирование размера шрифта во всех браузерах.
+ * 2. Исправьте нечетный размер шрифта "em" во всех браузерах.
+ */
 
-.classic .vcard > .grid-x > .cell > div + div {
-	margin-top: 5px;
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
-		
-.head {
-	position: relative;
-}
 
-.classic .head {
-	max-width: 230px; /* Classic theme head width. Change with the `.classic .main {max-width: 590px;}` */
-}
+/**
+ * Добавьте правильный размер шрифта во всех браузерах.
+ */
 
-.head .round {
-	max-height: 330px; /* Round height = card width - 60px (card padding). Change with the `.main {max-width: 390px;}` */
-	
-	border-radius: 50%;
-	overflow-y: hidden; 	
-	-ms-overflow-style: none; 
-	scrollbar-width: none; 
-	overflow: -moz-scrollbars-none;
+small {
+  font-size: 80%;
 }
 
-.head .round::-webkit-scrollbar {
-	width: 0px; 
-	height: 0px; 
-	background: transparent;
-}
+/**
+ * Не допускайте, чтобы элементы `sub` и `sup` влияли на высоту строки во
+ * всех браузерах.
+ */
 
-.head .round .avatar.full {
-	max-height: 100%;
-	width: auto;
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
-.head .round.text {
-	background-color: rgba(15, 15, 15, 0.1);
-	overflow-y: auto;
+sub {
+  bottom: -0.25em;
 }
 
-body.dark .head .round.text {
-	color: white; /* Dark theme font color */ /* Note */
-	background-color: rgba(255, 255, 255, 0.1);
+sup {
+  top: -0.5em;
 }
 
-.classic .head .round {
-	max-height: 230px; /* Classic theme round height. Change with the `.classic .head {max-width: 230px;}` */
-}
+/* Встроенное содержимое
+   ========================================================================== */
 
-.head .note {
-	font-size: 75%; /* Font size */ /* Note */
+/**
+ * Удалите границы на изображениях внутри ссылок в IE 10.
+ */
 
-	display: block;
-	padding: 45px;
+img {
+  border-style: none;
 }
 
-.head img.qrcode {
-	background-color: rgb(255, 255, 255);
-	
-	padding: 45px;
-}
+/* Формы
+   ========================================================================== */
 
-.head .vcard-link, 
-.head .qrcode-link, 
-.head .note-link, 
-.head .url {
-	position: absolute; 
-	cursor: pointer;
-}
-		
-.head .vcard-link, .head .qrcode-link {
-	top: 0;
-	padding-bottom: 10px;
-}
+/**
+ * 1. Измените стили шрифтов во всех браузерах.
+ * 2. Удалите поля в Firefox и Safari.
+ */
 
-.head .vcard-link {
-	left: 0;
-	padding-right: 10px;
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
-.head .qrcode-link {
-	right: 0;
-	padding-left: 10px;
-}
+/**
+ * Показать переполнение в IE.
+ * 1. Показать переполнение в Edge.
+ */
 
-.head .note-link, .head .url {
-	bottom: 0;
-	padding-top: 10px;
+button,
+input { /* 1 */
+  overflow: visible;
 }
 
-.head .note-link {
-	left: 0;
-	padding-right: 10px;
-}
+/**
+ * Удалите наследование 'text transform' в Edge, Firefox и IE.
+ * 1. Удалите наследование 'text transform' в Firefox.
+ */
 
-.head .url {
-	right: 0;
-	padding-left: 10px;
+button,
+select { /* 1 */
+  text-transform: none;
 }
 
-.vcard h1 {
-	font-size: 150%; /* Font size */ /* Name */	
-	font-family: inherit;
-}
+/**
+ * Исправьте невозможность стилизовать кликабельные типы в iOS и Safari.
+ */
 
-.vcard h1.name {
-	font-weight: inherit;
-	padding-bottom: 15px;
-	max-width: inherit;
-	margin-top: 15px;
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
 }
 
-.vcard h1.name-border {
-	border-bottom: 2px solid red;
-}
+/**
+ * Удалите внутреннюю границу и отступы в Firefox.
+ */
 
-.vcard h1 span[data-toggle] { 
-	cursor: pointer;
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
 }
 
-.vcard h1 small {
-	font-size: 50%; /* Font size */ /* Nickname */
-	color: #8a8a8a; /* Font color */ /* Nickname */
-	
-	display: block;
-	line-height: 1.5;
-}
+/**
+ * Восстановите стиль фокусировки, установленный предыдущим правилом.
+ */
 
-.classic .vcard h1 small {
-	font-size: 60%; /* Classic theme font size */ /* Nickname */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
 }
 
-body.dark .vcard h1 small {
-	color: #cacaca; /* Dark theme font color */ /* Nickname */
-}
+/**
+ * Исправьте отступы в Firefox.
+ */
 
-.vcard h1 + div {
-	margin-top: 15px;
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
 }
 
-.vcard > div + div {
-	margin-top: 5px;
-}
+/**
+ * 1. Исправьте перенос текста в Edge и IE.
+ * 2. Исправьте наследование цвета от элементов `fieldset` в IE.
+ * 3. Удалите отступы, чтобы разработчики не были застигнуты врасплох, когда они обнулятся
+ *    * элементы `fieldset` во всех браузерах.
+ */
 
-.vcard .social a {
-	display: inline-block;
-	margin: 15px 7px 0 7px;
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
-.vcard .social a:not([href]) {
-	cursor: inherit;
-}
+/**
+ * Добавьте правильное выравнивание по вертикали в Chrome, Firefox и Opera.
+ */
 
-.vcard .email {
-	word-wrap: break-word;
-    word-break: break-all;
+progress {
+  vertical-align: baseline;
 }
 
-@media all and (min-width: 640px) {
-	.classic .vcard h1.name {
-		margin-top: 0;
-	}
-}
+/**
+ * Удалите вертикальную полосу прокрутки по умолчанию в IE 10+.
+ */
 
-@media all and (max-width: 639px) {
-	.classic .main, body.classic.dark .main {
-		max-width: 300px;
-	}
+textarea {
+  overflow: auto;
 }
 
+/**
+ * 1. Добавьте правильный размер поля в IE 10.
+ * 2. Удалите отступы в IE 10.
+ */
 
-
-/* Напишу свой стиль для NOTE */
-.vcard .note {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-top: 30px; /* Увеличиваем отступ сверху */
-    margin-bottom: 30px; /* Увеличиваем отступ снизу */
-    padding: 20px; /* Увеличиваем отступ внутри */
-    color: #fff; /* Светлый текст */
-    border-radius: 5px;
-    white-space: pre-line; /* Сохраняет переводы строк \n */
-}
-
-.vcard .note ul {
-    list-style-type: disc; /* Тип маркера — круглый */
-    padding-left: 25px; /* Увеличиваем отступ слева для списка */
-    margin: 0; /* Убираем дополнительные отступы */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
-.vcard .note li {
-    margin-bottom: 12px; /* Увеличиваем отступ между пунктами списка */
-}
+/**
+ * Исправьте стиль курсора кнопок увеличения и уменьшения в Chrome.
+ */
 
-.vcard .note a {
-    color: #1a73e8; /* Синий цвет для ссылок */
-    text-decoration: none;
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
 }
 
-/* Подчеркивание при наведении для всех устройств */
-.vcard .note a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
+/**
+ * 1. Исправьте странный внешний вид в Chrome и Safari.
+ * 2. Исправьте стиль контура в Safari.
+ */
 
-/* Для мобильных устройств - всегда подчеркиваем ссылку */
-@media (max-width: 768px) {
-    .vcard .note a {
-        text-decoration: underline; /* Подчеркивание всегда */
-    }
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
+/**
+ * Удалите внутреннюю прокладку в Chrome и Safari на mac OS.
+ */
 
-* {
-    box-sizing: border-box; /* Убирает проблемы с размерами */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
-/* Чуть увеличивает размер иконки GitHab */
-#url i {
-    font-size: 1.4em; 
-}
-
-
-
-
+/**
+ * 1. Исправьте невозможность стилизовать кликабельные типы в iOS и Safari.
+ * 2. Измените свойства шрифта на `наследование` в Safari.
+ */
 
-/* Запрещаем выделение текста */
-.no-select {
-    user-select: none; /* Запрещает выделение текста */
-    -webkit-user-drag: none; /* Запрещает перетаскивание для webkit-браузеров */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
-/* Запрещаем перетаскивание ссылки */
-.no-drag {
-    pointer-events: auto; /* Ссылка остается кликабельной */
-}
-
-
+/* Интерактивность
+   ========================================================================== */
 
+/*
+ * Добавьте правильное отображение в Edge, IE 10+ и Firefox.
+ */
 
-/* Стиль для версии сайта */
-.footer-version {
-    position: fixed; /* Закрепить внизу */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Центрирование по горизонтали */
-    font-size: 14px; /* Размер текста */
-    color: #555; /* Меньше контрастный цвет */
-    background-color: transparent; /* Прозрачный фон */
-    padding: 5px 10px; /* Отступы */
-    border-radius: 5px; /* Закругленные углы */
-    font-weight: normal; /* Убираем выделение жирным */
-    opacity: 0.7; /* Легкая прозрачность */
-    user-select: none;  /* Запрещаем выделение текста */
-    pointer-events: none; /* Запрещаем клики на тексте */
-    bottom: 10px; /* Базовый отступ от нижнего края */
-    z-index: 9999; /* Убедитесь, что версия будет поверх других элементов */
+details {
+  display: block;
 }
 
+/*
+ * Добавьте правильное отображение во всех браузерах.
+ */
 
-/* Скрытие версии сайта в горизонтальном положении на мобильных и планшетах */
-@media (max-width: 932px) and (orientation: landscape) {
-    .footer-version {
-        display: none;
-    }
+summary {
+  display: list-item;
 }
 
-/* Скрытие версии сайта в горизонтальном положении на устройствах с шириной больше 768px */
-@media (min-width: 932x) and (orientation: landscape) {
-    .footer-version {
-        display: none;
-    }
-}
+/* Разное
+   ========================================================================== */
 
+/**
+ * Добавьте правильное отображение в IE 10+.
+ */
 
-/* Стили для кнопки авторизации */
-#open-auth-page {
-	margin-left: 13px; /* Сделал отступ кнопки */
-    background-color: #332323; /* Очень светлый серый фон */
-    color: #f1f0f0; /* Темно-серый текст */
-    border: 1px solid #ac8b8b; /*  граница */
-    padding: 6px 12px; /* Меньшие отступы для компактности */
-    font-size: 12px; /* Меньший размер текста */
-    border-radius: 20px; /* Сильно закругленные углы */
-    cursor: pointer; /* Курсор при наведении */
-    transition: all 0.3s ease; /* Плавные изменения */
-    font-weight: 400; /* Обычный вес шрифта */
+template {
+  display: none;
 }
 
-/* Стили для кнопки при наведении */
-#open-auth-page:hover {
-    background-color: #e0e0e0; /* Светло-серый фон при наведении */
-    color: #333; /* Более темный текст */
-    border-color: #ccc; /* Светлая граница при наведении */
-}
+/**
+ * Добавьте правильное отображение в IE 10.
+ */
 
-/* Стили для кнопки при нажатии */
-#open-auth-page:active {
-    background-color: #d0d0d0; /* Еще более светлый серый при нажатии */
-    color: #222; /* Очень темный текст при нажатии */
+[hidden] {
+  display: none;
 }
-
