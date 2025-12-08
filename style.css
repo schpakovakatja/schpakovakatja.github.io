@@ -77,7 +77,7 @@ a:hover {
 }
 
 /* QR-код Telegram */
-.telegram-qr img {
+.telegram-qr png {
     width: 140px;
     height: 140px;
     margin-top: 10px;
@@ -86,7 +86,7 @@ a:hover {
     transition: transform 0.3s;
 }
 
-.telegram-qr img:hover {
+.telegram-qr png:hover {
     transform: scale(1.1);
 }
 
