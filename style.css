@@ -1,78 +1,97 @@
-.about {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 40px 20px;
+* Общие стили */
+body {
+    margin: 0;
     font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #1b3a2f, #2d5540);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Карточка визитки */
+.card {
+    background-color: #ffffff;
+    color: #1b3a2f;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
 
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5em;
-    color: #2c3e50;
-    text-align: center;
+/* Профиль */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 3px solid #1b3a2f;
 }
 
-.about h3 {
-    font-size: 1.5rem;
-    margin-top: 1.5em;
-    color: #34495e;
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
 }
 
-.about p {
+.title {
+    color: #2d5540;
     font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1em;
-    transition: color 0.3s;
+    margin-bottom: 25px;
 }
 
-.skills {
+/* Контакты и навыки */
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #1b3a2f;
+}
+
+ul {
     list-style: none;
     padding: 0;
-    margin: 1em 0;
+    margin: 0 0 20px 0;
 }
 
-.skills li {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    margin-bottom: 0.8em;
+li {
+    margin-bottom: 10px;
     transition: transform 0.3s, color 0.3s;
 }
 
-.skills li:hover {
+li:hover {
     transform: translateX(5px);
-    color: #0088cc;
+    color: #2d5540;
 }
 
-.skill-icon {
-    margin-right: 10px;
-    font-size: 1.2rem;
-}
-
-.button-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #0088cc;
-    color: #fff;
+a {
+    color: #1b3a2f;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: color 0.3s;
 }
 
-.button-link:hover {
-    background-color: #006699;
-    transform: translateY(-2px);
+a:hover {
+    color: #2d5540;
+}
+
+/* QR-код Telegram */
+.telegram-qr img {
+    width: 140px;
+    height: 140px;
+    margin-top: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.telegram-qr img:hover {
+    transform: scale(1.1);
 }
 
 /* Анимация появления */
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
 }
