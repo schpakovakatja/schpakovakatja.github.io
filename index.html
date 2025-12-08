@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Моя визитка</title>
-
-    <!-- Normalize.css -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Основные стили -->
-    <link rel="stylesheet" href="style2.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка Екатерины Шпаковой</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="card">
+        <div class="profile">
+            <img src="images/profile.jpg" alt="Екатерина Шпакова" class="profile-pic">
+            <h1>Екатерина Шпакова</h1>
+            <p class="title">Junior QA Engineer</p>
+        </div>
 
-    <header class="header">
-        <img class="header__avatar" src="photo.jpg" alt="Фото" />
-        <h1 class="header__title">Шпакова Екатерина</h1>
-        <h3>Навыки</h3>
-  <ul class="skills">
-    <li><span class="skill-icon">📝</span> Составление тест-кейсов и чек-листов</li>
-    <li><span class="skill-icon">🔍</span> Анализ требований и выявление дефектов</li>
-    <li><span class="skill-icon">🛠️</span> Postman, JMeter, DevTools, Redmine, TestRail, Playwright, Android Studio</li>
-    <li><span class="skill-icon">📊</span> Работа с логами приложений</li>
-  </ul>
+        <div class="contact">
+            <h2>Контакты</h2>
+            <ul>
+                <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li>Telegram: <a href="https://t.me/maybekate" target="_blank">@maybekate</a></li>
+                <li>GitHub: <a href="https://github.com/schpakovakatja" target="_blank">schpakovakatja</a></li>
+            </ul>
+        </div>
 
-  <p>Стремлюсь повышать качество продуктов и улучшать пользовательский опыт через внимательное тестирование и развитие тест-мышления.</p>
+        <div class="skills">
+            <h2>Навыки</h2>
+            <ul>
+                <li>Ручное тестирование веб и мобильных приложений</li>
+                <li>Составление тест-кейсов и чек-листов</li>
+                <li>Postman, JMeter, DevTools, TestRail, Playwright</li>
+                <li>Анализ требований и выявление дефектов</li>
+            </ul>
+        </div>
 
-    <section class="links">
-        <h2 class="links__header">Связаться со мной</h2>
+        <div class="telegram-qr">
+            <p>Сканируй QR-код и напиши в Telegram:</p>
+            <a href="https://t.me/maybekate" target="_blank">
+                <img src="images/telegram-qr.png" alt="Telegram QR">
+            </a>
+        </div>
+    </div>
 
-        <ul class="links__container">
-            <li class="links__link">
-                <p class="links__title">Telegram</p>
-                <a class="links__link" href="https://t.me/maybekate" target="_blank">@maybekate</a>
-            </li>
-
-            <li class="links__link">
-                <p class="links__title">Email</p>
-                <a class="links__link" href="mailto:Schpakova.katja@yandex.ru">Schpakova.katja@yandex.ru</a>
-            </li>
-
-        </ul>
-    </section>
-
-    <footer>
-    <a class="button-link" href="https://t.me/maybekate" target="_blank" id="fun-button">
-        Нажми для связи со мной😊
-    </a>
-</footer>
-
-    <script src="script.js"></script>
+    <script src="skript.js"></script>
 </body>
 </html>
