@@ -1,7 +1,9 @@
-/* Это объявление переменной, мы наши кнопку по тегу */
-const button = document.querySelector('button');
+// Анимация QR-кода при клике
+const qr = document.querySelector('.telegram-qr img');
 
-/* Тут на кнопку навешиваем обрабочик, который ждёт клика и тогда запустит логику */
-button.addEventListener('click', function() {
-	alert("If it's later than 10 p.m. and you think it's still a great idea, don't do it 😉")
-})
+qr.addEventListener('click', () => {
+    qr.style.transform = 'scale(1.2)';
+    setTimeout(() => {
+        qr.style.transform = 'scale(1)';
+    }, 200);
+});
