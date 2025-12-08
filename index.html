@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя визитка</title>
+
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+
+    <header class="header">
+        <img class="header__avatar" src="photo.jpg" alt="Фото" />
+        <h1 class="header__title">Имя Фамилия</h1>
+        <p class="header__subtitle">Короткое описание о себе. Чем занимаюсь, какие навыки есть.</p>
+    </header>
+
+    <section class="links">
+        <h2 class="links__header">Связаться со мной</h2>
+
+        <ul class="links__container">
+            <li class="links__link">
+                <p class="links__title">Telegram</p>
+                <a class="links__link" href="https://t.me/username" target="_blank">@username</a>
+            </li>
+
+            <li class="links__link">
+                <p class="links__title">Email</p>
+                <a class="links__link" href="mailto:example@mail.com">example@mail.com</a>
+            </li>
+
+            <li class="links__link">
+                <p class="links__title">GitHub</p>
+                <a class="links__link" href="https://github.com/yourname" target="_blank">github.com/yourname</a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <a class="button-link" href="#" id="fun-button">Нажми меня 😊</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
