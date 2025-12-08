@@ -1,0 +1,410 @@
+/* Text font */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700|Roboto+Mono:400,600|Roboto+Slab:400,600&subset=cyrillic,latin);
+
+body {
+	font-family: 'Roboto', Arial, sans-serif; /* Text font */
+	font-size: 140%; /* Font size */ /* Text */
+	background: rgb(255, 255, 255) repeat center center fixed; /* Background */
+	background-size: cover;
+	padding: 0; 
+	margin: 0;
+}
+
+body:not(.classic) .vcard > .grid-x {
+	display: block;
+	padding: 0;
+}
+
+body:not(.classic) .vcard > .grid-x > .cell {
+	display: block;
+	padding: 0;
+}
+
+body.classic {
+	font-size: 100%; /* Classic theme font size */ /* Text */
+}
+
+body.dark {
+	background-color: rgb(15, 15, 15); /* Background */
+}
+
+body.dark.background {
+	background: url(background.jpg) repeat center center fixed; /* Background */
+	background-size: cover;
+	background-color: rgb(15, 15, 15);
+}
+
+body.condensed {
+	font-family: 'Roboto Condensed', Arial, sans-serif; /* Text font */
+}
+
+body.mono {
+	font-family: 'Roboto Mono', Arial, sans-serif; /* Text font */
+}
+
+body.slab {
+	font-family: 'Roboto Slab', Arial, sans-serif; /* Text font */
+}
+
+.main {
+	max-width: 390px; /* Card width = width + 60px (padding left and right). Change with the `.head .round {max-height: 330px;}` */
+	color: black; /* Font color */ /* Text */
+	background-color: rgba(255, 255, 255, 0.5);
+	
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	height: calc(100vh);
+	display: table;
+}
+
+.classic .main, body.classic.dark .main {
+	max-width: 590px; /* Classic theme card width = width + 60px (padding left and right). Change with the `.classic .head {max-width: 230px;}` */
+	background-color: transparent;
+}
+
+body.dark .main {
+	color: white; /* Dark theme font color */ /* Text */
+	background-color: rgba(15, 15, 15, 0.5);
+}
+
+.vcard {
+	max-width: inherit;
+	padding: 30px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.vcard a, 
+.vcard a:link, 
+.vcard a:visited, 
+.vcard a:hover, 
+.vcard a:active {
+	color: black; /* Font color */ /* Links */
+	text-decoration: none;
+}
+
+body.dark .vcard a,
+body.dark .vcard a:link, 
+body.dark .vcard a:visited, 
+body.dark .vcard a:hover, 
+body.dark .vcard a:active {
+	color: white; /* Dark theme font color */ /* Links */
+}
+
+.classic .vcard > .grid-x {
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 1px solid #cacaca;
+	
+	margin-left: -30px;
+	margin-right: -30px;
+	padding: 30px;
+}
+
+body.dark.classic .vcard > .grid-x {
+	background-color: rgba(15, 15, 15, 0.5);
+	border: 1px solid #8a8a8a;
+}
+
+body.dark.background .vcard > .grid-x {
+	border: 0;
+}
+
+.classic .vcard > .grid-x > .cell > div + div {
+	margin-top: 5px;
+}
+		
+.head {
+	position: relative;
+}
+
+.classic .head {
+	max-width: 230px; /* Classic theme head width. Change with the `.classic .main {max-width: 590px;}` */
+}
+
+.head .round {
+	max-height: 330px; /* Round height = card width - 60px (card padding). Change with the `.main {max-width: 390px;}` */
+	
+	border-radius: 50%;
+	overflow-y: hidden; 	
+	-ms-overflow-style: none; 
+	scrollbar-width: none; 
+	overflow: -moz-scrollbars-none;
+}
+
+.head .round::-webkit-scrollbar {
+	width: 0px; 
+	height: 0px; 
+	background: transparent;
+}
+
+.head .round .avatar.full {
+	max-height: 100%;
+	width: auto;
+}
+
+.head .round.text {
+	background-color: rgba(15, 15, 15, 0.1);
+	overflow-y: auto;
+}
+
+body.dark .head .round.text {
+	color: white; /* Dark theme font color */ /* Note */
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.classic .head .round {
+	max-height: 230px; /* Classic theme round height. Change with the `.classic .head {max-width: 230px;}` */
+}
+
+.head .note {
+	font-size: 75%; /* Font size */ /* Note */
+
+	display: block;
+	padding: 45px;
+}
+
+.head img.qrcode {
+	background-color: rgb(255, 255, 255);
+	
+	padding: 45px;
+}
+
+.head .vcard-link, 
+.head .qrcode-link, 
+.head .note-link, 
+.head .url {
+	position: absolute; 
+	cursor: pointer;
+}
+		
+.head .vcard-link, .head .qrcode-link {
+	top: 0;
+	padding-bottom: 10px;
+}
+
+.head .vcard-link {
+	left: 0;
+	padding-right: 10px;
+}
+
+.head .qrcode-link {
+	right: 0;
+	padding-left: 10px;
+}
+
+.head .note-link, .head .url {
+	bottom: 0;
+	padding-top: 10px;
+}
+
+.head .note-link {
+	left: 0;
+	padding-right: 10px;
+}
+
+.head .url {
+	right: 0;
+	padding-left: 10px;
+}
+
+.vcard h1 {
+	font-size: 150%; /* Font size */ /* Name */	
+	font-family: inherit;
+}
+
+.vcard h1.name {
+	font-weight: inherit;
+	padding-bottom: 15px;
+	max-width: inherit;
+	margin-top: 15px;
+}
+
+.vcard h1.name-border {
+	border-bottom: 2px solid red;
+}
+
+.vcard h1 span[data-toggle] { 
+	cursor: pointer;
+}
+
+.vcard h1 small {
+	font-size: 50%; /* Font size */ /* Nickname */
+	color: #8a8a8a; /* Font color */ /* Nickname */
+	
+	display: block;
+	line-height: 1.5;
+}
+
+.classic .vcard h1 small {
+	font-size: 60%; /* Classic theme font size */ /* Nickname */
+}
+
+body.dark .vcard h1 small {
+	color: #cacaca; /* Dark theme font color */ /* Nickname */
+}
+
+.vcard h1 + div {
+	margin-top: 15px;
+}
+
+.vcard > div + div {
+	margin-top: 5px;
+}
+
+.vcard .social a {
+	display: inline-block;
+	margin: 15px 7px 0 7px;
+}
+
+.vcard .social a:not([href]) {
+	cursor: inherit;
+}
+
+.vcard .email {
+	word-wrap: break-word;
+    word-break: break-all;
+}
+
+@media all and (min-width: 640px) {
+	.classic .vcard h1.name {
+		margin-top: 0;
+	}
+}
+
+@media all and (max-width: 639px) {
+	.classic .main, body.classic.dark .main {
+		max-width: 300px;
+	}
+}
+
+
+
+/* Напишу свой стиль для NOTE */
+.vcard .note {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 30px; /* Увеличиваем отступ сверху */
+    margin-bottom: 30px; /* Увеличиваем отступ снизу */
+    padding: 20px; /* Увеличиваем отступ внутри */
+    color: #fff; /* Светлый текст */
+    border-radius: 5px;
+    white-space: pre-line; /* Сохраняет переводы строк \n */
+}
+
+.vcard .note ul {
+    list-style-type: disc; /* Тип маркера — круглый */
+    padding-left: 25px; /* Увеличиваем отступ слева для списка */
+    margin: 0; /* Убираем дополнительные отступы */
+}
+
+.vcard .note li {
+    margin-bottom: 12px; /* Увеличиваем отступ между пунктами списка */
+}
+
+.vcard .note a {
+    color: #1a73e8; /* Синий цвет для ссылок */
+    text-decoration: none;
+}
+
+/* Подчеркивание при наведении для всех устройств */
+.vcard .note a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Для мобильных устройств - всегда подчеркиваем ссылку */
+@media (max-width: 768px) {
+    .vcard .note a {
+        text-decoration: underline; /* Подчеркивание всегда */
+    }
+}
+
+
+* {
+    box-sizing: border-box; /* Убирает проблемы с размерами */
+}
+
+/* Чуть увеличивает размер иконки GitHab */
+#url i {
+    font-size: 1.4em; 
+}
+
+
+
+
+
+/* Запрещаем выделение текста */
+.no-select {
+    user-select: none; /* Запрещает выделение текста */
+    -webkit-user-drag: none; /* Запрещает перетаскивание для webkit-браузеров */
+}
+
+/* Запрещаем перетаскивание ссылки */
+.no-drag {
+    pointer-events: auto; /* Ссылка остается кликабельной */
+}
+
+
+
+
+/* Стиль для версии сайта */
+.footer-version {
+    position: fixed; /* Закрепить внизу */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translateX(-50%); /* Центрирование по горизонтали */
+    font-size: 14px; /* Размер текста */
+    color: #555; /* Меньше контрастный цвет */
+    background-color: transparent; /* Прозрачный фон */
+    padding: 5px 10px; /* Отступы */
+    border-radius: 5px; /* Закругленные углы */
+    font-weight: normal; /* Убираем выделение жирным */
+    opacity: 0.7; /* Легкая прозрачность */
+    user-select: none;  /* Запрещаем выделение текста */
+    pointer-events: none; /* Запрещаем клики на тексте */
+    bottom: 10px; /* Базовый отступ от нижнего края */
+    z-index: 9999; /* Убедитесь, что версия будет поверх других элементов */
+}
+
+
+/* Скрытие версии сайта в горизонтальном положении на мобильных и планшетах */
+@media (max-width: 932px) and (orientation: landscape) {
+    .footer-version {
+        display: none;
+    }
+}
+
+/* Скрытие версии сайта в горизонтальном положении на устройствах с шириной больше 768px */
+@media (min-width: 932x) and (orientation: landscape) {
+    .footer-version {
+        display: none;
+    }
+}
+
+
+/* Стили для кнопки авторизации */
+#open-auth-page {
+	margin-left: 13px; /* Сделал отступ кнопки */
+    background-color: #332323; /* Очень светлый серый фон */
+    color: #f1f0f0; /* Темно-серый текст */
+    border: 1px solid #ac8b8b; /*  граница */
+    padding: 6px 12px; /* Меньшие отступы для компактности */
+    font-size: 12px; /* Меньший размер текста */
+    border-radius: 20px; /* Сильно закругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: all 0.3s ease; /* Плавные изменения */
+    font-weight: 400; /* Обычный вес шрифта */
+}
+
+/* Стили для кнопки при наведении */
+#open-auth-page:hover {
+    background-color: #e0e0e0; /* Светло-серый фон при наведении */
+    color: #333; /* Более темный текст */
+    border-color: #ccc; /* Светлая граница при наведении */
+}
+
+/* Стили для кнопки при нажатии */
+#open-auth-page:active {
+    background-color: #d0d0d0; /* Еще более светлый серый при нажатии */
+    color: #222; /* Очень темный текст при нажатии */
+}
+
